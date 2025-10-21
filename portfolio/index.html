@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio | Haguith Guez</title>
+  <meta namgie="description" content="Portfolio développeur en informatique présentant mes projets et compétences.">
+  <meta name="haguith" content="Haguith Guez">
+
+  <!-- OpenGraph pour réseaux sociaux -->
+  <meta property="og:title" content="Portfolio | Haguith Guez">
+  <meta property="og:description" content="Découvrez mes projets et compétences en informatique.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://Portfolio-haguith.com">
+  <meta property="og:image" content="https://Portfolio-haguith.com/preview.png">
+
+  <!-- TailwindCSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+  <!-- Navbar -->
+  <header class="fixed w-full bg-white shadow z-50">
+    <nav class="container mx-auto flex justify-between items-center py-4 px-6">
+      <h1 class="text-2xl font-bold">Haguith Guez</h1>
+      <ul class="flex space-x-6">
+        <li><a href="#about" class="hover:text-blue-500">Présentation</a></li>
+        <li><a href="#skills" class="hover:text-blue-500">Compétences</a></li>
+        <li><a href="#projects" class="hover:text-blue-500">Projets</a></li>
+        <li><a href="#contact" class="hover:text-blue-500">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="h-screen flex items-center justify-center bg-gradient-to-r from-blue-500 to-indigo-600 text-white">
+    <div class="text-center">
+      <h2 class="text-4xl md:text-6xl font-bold mb-4">Salut, je suis <span class="text-yellow-300">Haguith Guez</span></h2>
+      <p class="text-xl md:text-2xl">Développeur passionné en informatique</p>
+      <a href="#projects" class="mt-6 inline-block bg-yellow-400 text-gray-900 px-6 py-3 rounded-full font-semibold hover:bg-yellow-300 transition">Voir mes projets</a>
+    </div>
+  </section>
+
+  <!-- Présentation -->
+  <section id="about" class="py-20 container mx-auto px-6">
+    <h3 class="text-3xl font-bold mb-6 text-center">Présentation</h3>
+    <div class="md:flex md:space-x-10 items-center">
+      <img src="" alt="Photo de profil" class="rounded-full mx-auto mb-6 md:mb-0 shadow-lg">
+      <p class="text-lg leading-relaxed">
+        Je suis un développeur passionné par les nouvelles technologies, spécialisé en <strong>développement web et logiciel</strong>. 
+        J’aime transformer des idées en solutions concrètes à travers mes projets. 
+        Curieux et motivé, je suis toujours en quête de nouvelles compétences.
+      </p>
+    </div>
+  </section>
+
+  <!-- Compétences -->
+  <section id="skills" class="bg-gray-100 py-20">
+    <div class="container mx-auto px-6">
+      <h3 class="text-3xl font-bold mb-10 text-center">Compétences</h3>
+      <div class="grid md:grid-cols-3 gap-8 text-center">
+        <div class="p-6 bg-white shadow rounded-xl">
+          <h4 class="text-xl font-semibold mb-3">Langages</h4>
+          <p>Python, Java, php, JavaScript, SQL</p>
+        </div>
+        <div class="p-6 bg-white shadow rounded-xl">
+          <h4 class="text-xl font-semibold mb-3">Web</h4>
+          <p>HTML, CSS,</p>
+        </div>
+        <div class="p-6 bg-white shadow rounded-xl">
+          <h4 class="text-xl font-semibold mb-3">Outils</h4>
+          <p>Git, pycharm, netbeens, VS Code</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projets -->
+  <section id="projects" class="py-20 container mx-auto px-6">
+    <h3 class="text-3xl font-bold mb-10 text-center">Mes Projets</h3>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-white shadow rounded-xl overflow-hidden">
+        <img src="images/logo.png"  width="100" height="100" alt="Projet 1" class="w-full">
+        <div class="p-6">
+          <h4 class="text-xl font-semibold mb-2">Projet_Boutique</h4>
+          <p class="mb-4">Description brève du projet avec les technos utilisées.</p>
+          <a href="https://github.com/gagite/projet_boutique/tree/master" class="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">Voir le projet</a>
+        </div>
+      </div>
+      <div class="bg-white shadow rounded-xl overflow-hidden">
+        <img src="images/gsb.jpg" alt="Projet 2" class="w-full">
+        <div class="p-6">
+          <h4 class="text-xl font-semibold mb-2">GSD appli-frais</h4>
+          <p class="mb-4">Description brève du projet avec les technos utilisées.</p>
+          <a href="https://github.com/gagite/GSB_appliFrais/tree/master" class="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">Voir le projet</a>
+        </div>
+      </div>
+      <div class="bg-white shadow rounded-xl overflow-hidden">
+        <img src="images/banniere.png" alt="Projet 3" class="w-full">
+        <div class="p-6">
+          <h4 class="text-xl font-semibold mb-2">Nolark</h4>
+          <p class="mb-4">Description brève du projet avec les technos utilisées.</p>
+          <a href="https://github.com/gagite/nolark/tree/master" class="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">Voir le projet</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="bg-gray-100 py-20">
+    <div class="container mx-auto px-6 text-center">
+      <h3 class="text-3xl font-bold mb-6">Contact</h3>
+      <p class="mb-6">Tu veux collaborer ou discuter ? N’hésite pas à me contacter.</p>
+      <a href="mailto:ton.haguith2005@gmail.com" class="bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-500 transition">Écrivez-moi</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-400 py-6 text-center">
+    <p>&copy; 2025 Haguith Guez. Tous droits réservés.</p>
+  </footer>
+
+</body>
+</html>
