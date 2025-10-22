@@ -1,124 +1,236 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portfolio | Haguith Guez</title>
-  <meta namgie="description" content="Portfolio développeur en informatique présentant mes projets et compétences.">
-  <meta name="haguith" content="Haguith Guez">
+  <meta name="description" content="Portfolio one-page sombre et violet présentant mon parcours, compétences et projets." />
+  <meta name="author" content="Haguith Guez" />
+  <meta name="theme-color" content="#5b21b6" />
 
-  <!-- OpenGraph pour réseaux sociaux -->
-  <meta property="og:title" content="Portfolio | Haguith Guez">
-  <meta property="og:description" content="Découvrez mes projets et compétences en informatique.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://Portfolio-haguith.com">
-  <meta property="og:image" content="https://Portfolio-haguith.com/preview.png">
+  <meta property="og:title" content="Portfolio | Haguith Guez" />
+  <meta property="og:description" content="Découvrez mon parcours (BTS SIO → Licence), mes compétences et projets." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/portfolio/images/banniere.png" />
 
-  <!-- TailwindCSS -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html { scroll-behavior: smooth; }
+  </style>
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans">
-
+<body class="bg-[#0a0713] text-gray-200 antialiased selection:bg-violet-600 selection:text-white">
   <!-- Navbar -->
-  <header class="fixed w-full bg-white shadow z-50">
-    <nav class="container mx-auto flex justify-between items-center py-4 px-6">
-      <h1 class="text-2xl font-bold">Haguith Guez</h1>
-      <ul class="flex space-x-6">
-        <li><a href="#about" class="hover:text-blue-500">Présentation</a></li>
-        <li><a href="#skills" class="hover:text-blue-500">Compétences</a></li>
-        <li><a href="#projects" class="hover:text-blue-500">Projets</a></li>
-        <li><a href="#contact" class="hover:text-blue-500">Contact</a></li>
+  <header class="fixed top-0 inset-x-0 z-50 border-b border-white/10 bg-[#0a0713]/80 backdrop-blur">
+    <nav class="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">
+      <a href="#a-propos" class="font-semibold tracking-wide text-white">Haguith Guez</a>
+      <ul class="hidden md:flex items-center gap-6 text-sm text-gray-300">
+        <li><a href="#a-propos" class="hover:text-violet-300">À propos</a></li>
+        <li><a href="#parcours" class="hover:text-violet-300">Mon parcours</a></li>
+        <li><a href="#competences" class="hover:text-violet-300">Compétences</a></li>
+        <li><a href="#projets" class="hover:text-violet-300">Mes projets</a></li>
       </ul>
+      <button id="nav-toggle" aria-label="Ouvrir le menu" class="md:hidden inline-flex items-center justify-center rounded-md px-3 py-2 text-gray-200 ring-1 ring-white/10 hover:bg-white/5">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
     </nav>
+    <div id="nav-menu" class="md:hidden hidden border-t border-white/10 bg-[#0a0713]">
+      <div class="max-w-6xl mx-auto px-6 py-3 space-y-3 text-gray-300">
+        <a href="#a-propos" class="block hover:text-violet-300">À propos</a>
+        <a href="#parcours" class="block hover:text-violet-300">Mon parcours</a>
+        <a href="#competences" class="block hover:text-violet-300">Compétences</a>
+        <a href="#projets" class="block hover:text-violet-300">Mes projets</a>
+      </div>
+    </div>
   </header>
 
-  <!-- Hero -->
-  <section class="h-screen flex items-center justify-center bg-gradient-to-r from-blue-500 to-indigo-600 text-white">
-    <div class="text-center">
-      <h2 class="text-4xl md:text-6xl font-bold mb-4">Salut, je suis <span class="text-yellow-300">Haguith Guez</span></h2>
-      <p class="text-xl md:text-2xl">Développeur passionné en informatique</p>
-      <a href="#projects" class="mt-6 inline-block bg-yellow-400 text-gray-900 px-6 py-3 rounded-full font-semibold hover:bg-yellow-300 transition">Voir mes projets</a>
-    </div>
-  </section>
-
-  <!-- Présentation -->
-  <section id="about" class="py-20 container mx-auto px-6">
-    <h3 class="text-3xl font-bold mb-6 text-center">Présentation</h3>
-    <div class="md:flex md:space-x-10 items-center">
-      <img src="" alt="Photo de profil" class="rounded-full mx-auto mb-6 md:mb-0 shadow-lg">
-      <p class="text-lg leading-relaxed">
-        Je suis un développeur passionné par les nouvelles technologies, spécialisé en <strong>développement web et logiciel</strong>. 
-        J’aime transformer des idées en solutions concrètes à travers mes projets. 
-        Curieux et motivé, je suis toujours en quête de nouvelles compétences.
-      </p>
-    </div>
-  </section>
-
-  <!-- Compétences -->
-  <section id="skills" class="bg-gray-100 py-20">
-    <div class="container mx-auto px-6">
-      <h3 class="text-3xl font-bold mb-10 text-center">Compétences</h3>
-      <div class="grid md:grid-cols-3 gap-8 text-center">
-        <div class="p-6 bg-white shadow rounded-xl">
-          <h4 class="text-xl font-semibold mb-3">Langages</h4>
-          <p>Python, Java, php, JavaScript, SQL</p>
-        </div>
-        <div class="p-6 bg-white shadow rounded-xl">
-          <h4 class="text-xl font-semibold mb-3">Web</h4>
-          <p>HTML, CSS,</p>
-        </div>
-        <div class="p-6 bg-white shadow rounded-xl">
-          <h4 class="text-xl font-semibold mb-3">Outils</h4>
-          <p>Git, pycharm, netbeens, VS Code</p>
+  <main class="pt-24">
+    <!-- À propos -->
+    <section id="a-propos" class="relative overflow-hidden">
+      <div class="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-br from-violet-900/30 via-fuchsia-900/10 to-transparent"></div>
+      <div class="max-w-6xl mx-auto px-6 py-20 md:py-28">
+        <div class="grid md:grid-cols-2 gap-10 items-center">
+          <div>
+            <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight">
+              Bonjour, je suis <span class="bg-clip-text text-transparent bg-gradient-to-r from-violet-400 to-fuchsia-400">Haguith Guez</span>
+            </h1>
+            <p class="mt-6 text-lg text-gray-300 leading-relaxed">
+              Développeur passionné, je conçois des applications web modernes. Sur cette page, découvrez <span class="text-violet-300">mon parcours</span> depuis le <strong>BTS SIO</strong> jusqu’à la <strong>Licence</strong>, ainsi que mes <strong>compétences</strong> et <strong>projets</strong> marquants.
+            </p>
+          </div>
+          <div class="md:justify-self-end">
+            <div class="relative">
+              <div class="absolute -inset-1 rounded-2xl bg-gradient-to-r from-violet-700 to-fuchsia-700 blur opacity-50"></div>
+              <img src="/portfolio/images/banniere.png" alt="Bannière portfolio" class="relative rounded-2xl ring-1 ring-white/10 shadow-2xl w-full object-cover" />
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Projets -->
-  <section id="projects" class="py-20 container mx-auto px-6">
-    <h3 class="text-3xl font-bold mb-10 text-center">Mes Projets</h3>
-    <div class="grid md:grid-cols-3 gap-8">
-      <div class="bg-white shadow rounded-xl overflow-hidden">
-        <img src="images/logo.png"  width="100" height="100" alt="Projet 1" class="w-full">
-        <div class="p-6">
-          <h4 class="text-xl font-semibold mb-2">Projet_Boutique</h4>
-          <p class="mb-4">Description brève du projet avec les technos utilisées.</p>
-          <a href="https://github.com/gagite/projet_boutique/tree/master" class="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">Voir le projet</a>
+    <!-- Mon parcours -->
+    <section id="parcours" class="border-t border-white/10">
+      <div class="max-w-6xl mx-auto px-6 py-20">
+        <h2 class="text-2xl md:text-3xl font-bold">Mon parcours</h2>
+        <p class="mt-3 text-gray-400">De BTS SIO à après une Licence</p>
+
+        <div class="mt-10 relative">
+          <div class="absolute left-3 md:left-4 top-0 bottom-0 w-px bg-gradient-to-b from-violet-600/70 via-violet-600/20 to-transparent"></div>
+          <ol class="space-y-10">
+            <li class="relative pl-10 md:pl-12">
+              <span class="absolute left-0 top-1.5 grid h-6 w-6 place-items-center rounded-full bg-violet-700 ring-2 ring-white/10">
+                <span class="h-2.5 w-2.5 rounded-full bg-white"></span>
+              </span>
+              <div class="flex flex-col gap-1">
+                <h3 class="font-semibold">BTS SIO — Services Informatiques aux Organisations</h3>
+                <p class="text-sm text-gray-400">Option SLAM/Option SISR (selon profil) • 20XX–20XX</p>
+                <p class="text-gray-300">Découverte des bases solides du développement, gestion de projets et bonnes pratiques.</p>
+              </div>
+            </li>
+            <li class="relative pl-10 md:pl-12">
+              <span class="absolute left-0 top-1.5 grid h-6 w-6 place-items-center rounded-full bg-violet-700 ring-2 ring-white/10">
+                <span class="h-2.5 w-2.5 rounded-full bg-white"></span>
+              </span>
+              <div class="flex flex-col gap-1">
+                <h3 class="font-semibold">Licence Informatique</h3>
+                <p class="text-sm text-gray-400">Spécialisation développement • 20XX–20XX</p>
+                <p class="text-gray-300">Approfondissement des architectures web, de l’algorithmie et des méthodologies modernes.</p>
+              </div>
+            </li>
+            <li class="relative pl-10 md:pl-12">
+              <span class="absolute left-0 top-1.5 grid h-6 w-6 place-items-center rounded-full bg-violet-700 ring-2 ring-white/10">
+                <span class="h-2.5 w-2.5 rounded-full bg-white"></span>
+              </span>
+              <div class="flex flex-col gap-1">
+                <h3 class="font-semibold">Aujourd’hui</h3>
+                <p class="text-sm text-gray-400">Post-licence</p>
+                <p class="text-gray-300">Je conçois des projets concrets, j’enrichis mes compétences et je prépare la suite (alternance/emploi).</p>
+              </div>
+            </li>
+          </ol>
         </div>
       </div>
-      <div class="bg-white shadow rounded-xl overflow-hidden">
-        <img src="images/gsb.jpg" alt="Projet 2" class="w-full">
-        <div class="p-6">
-          <h4 class="text-xl font-semibold mb-2">GSD appli-frais</h4>
-          <p class="mb-4">Description brève du projet avec les technos utilisées.</p>
-          <a href="https://github.com/gagite/GSB_appliFrais/tree/master" class="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">Voir le projet</a>
+    </section>
+
+    <!-- Compétences -->
+    <section id="competences" class="border-t border-white/10 bg-gradient-to-b from-[#0a0713] to-[#0c0818]">
+      <div class="max-w-6xl mx-auto px-6 py-20">
+        <h2 class="text-2xl md:text-3xl font-bold">Compétences</h2>
+        <p class="mt-3 text-gray-400">Technologies et outils utilisés</p>
+
+        <div class="mt-10 grid gap-6 md:grid-cols-3">
+          <div class="rounded-2xl border border-white/10 bg-white/5 p-6 shadow-2xl">
+            <h3 class="text-lg font-semibold text-white">Langages</h3>
+            <div class="mt-3 flex flex-wrap gap-2">
+              <span class="px-3 py-1 rounded-full bg-violet-700/30 text-violet-200 text-sm">Python</span>
+              <span class="px-3 py-1 rounded-full bg-violet-700/30 text-violet-200 text-sm">Java</span>
+              <span class="px-3 py-1 rounded-full bg-violet-700/30 text-violet-200 text-sm">PHP</span>
+              <span class="px-3 py-1 rounded-full bg-violet-700/30 text-violet-200 text-sm">JavaScript</span>
+              <span class="px-3 py-1 rounded-full bg-violet-700/30 text-violet-200 text-sm">SQL</span>
+            </div>
+          </div>
+          <div class="rounded-2xl border border-white/10 bg-white/5 p-6 shadow-2xl">
+            <h3 class="text-lg font-semibold text-white">Web</h3>
+            <div class="mt-3 flex flex-wrap gap-2">
+              <span class="px-3 py-1 rounded-full bg-violet-700/30 text-violet-200 text-sm">HTML</span>
+              <span class="px-3 py-1 rounded-full bg-violet-700/30 text-violet-200 text-sm">CSS</span>
+            </div>
+          </div>
+          <div class="rounded-2xl border border-white/10 bg-white/5 p-6 shadow-2xl">
+            <h3 class="text-lg font-semibold text-white">Outils</h3>
+            <div class="mt-3 flex flex-wrap gap-2">
+              <span class="px-3 py-1 rounded-full bg-violet-700/30 text-violet-200 text-sm">Git</span>
+              <span class="px-3 py-1 rounded-full bg-violet-700/30 text-violet-200 text-sm">PyCharm</span>
+              <span class="px-3 py-1 rounded-full bg-violet-700/30 text-violet-200 text-sm">NetBeans</span>
+              <span class="px-3 py-1 rounded-full bg-violet-700/30 text-violet-200 text-sm">VS Code</span>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="bg-white shadow rounded-xl overflow-hidden">
-        <img src="images/banniere.png" alt="Projet 3" class="w-full">
-        <div class="p-6">
-          <h4 class="text-xl font-semibold mb-2">Nolark</h4>
-          <p class="mb-4">Description brève du projet avec les technos utilisées.</p>
-          <a href="https://github.com/gagite/nolark/tree/master" class="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">Voir le projet</a>
+    </section>
+
+    <!-- Mes projets -->
+    <section id="projets" class="border-t border-white/10">
+      <div class="max-w-6xl mx-auto px-6 py-20">
+        <div class="flex items-end justify-between gap-4">
+          <div>
+            <h2 class="text-2xl md:text-3xl font-bold">Mes projets</h2>
+            <p class="mt-3 text-gray-400">Quelques réalisations et dépôts notables</p>
+          </div>
+        </div>
+
+        <div class="mt-10 grid gap-6 md:grid-cols-3">
+          <!-- Projet 1 -->
+          <article class="group overflow-hidden rounded-2xl border border-white/10 bg-white/5 shadow-2xl">
+            <div class="relative aspect-[16/10]">
+              <img src="/portfolio/images/logo.png" alt="Aperçu Projet Boutique" class="h-full w-full object-cover opacity-90 transition group-hover:opacity-100" />
+              <div class="absolute inset-0 bg-gradient-to-t from-[#0a0713] via-transparent to-transparent opacity-60"></div>
+            </div>
+            <div class="p-6">
+              <h3 class="font-semibold">Projet Boutique</h3>
+              <p class="mt-2 text-sm text-gray-400">Application e-commerce (dépôt GitHub) — technologies web.</p>
+              <a href="https://github.com/gagite/projet_boutique/tree/master" target="_blank" rel="noopener noreferrer" class="mt-4 inline-flex items-center gap-2 text-violet-300 hover:text-violet-200">
+                Voir le projet
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M7 7h10v10"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Projet 2 -->
+          <article class="group overflow-hidden rounded-2xl border border-white/10 bg-white/5 shadow-2xl">
+            <div class="relative aspect-[16/10]">
+              <img src="/portfolio/images/gsb.jpg" alt="Aperçu GSB AppliFrais" class="h-full w-full object-cover opacity-90 transition group-hover:opacity-100" />
+              <div class="absolute inset-0 bg-gradient-to-t from-[#0a0713] via-transparent to-transparent opacity-60"></div>
+            </div>
+            <div class="p-6">
+              <h3 class="font-semibold">GSB AppliFrais</h3>
+              <p class="mt-2 text-sm text-gray-400">Gestion de frais — suivi, saisie et reporting.</p>
+              <a href="https://github.com/gagite/GSB_appliFrais/tree/master" target="_blank" rel="noopener noreferrer" class="mt-4 inline-flex items-center gap-2 text-violet-300 hover:text-violet-200">
+                Voir le projet
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M7 7h10v10"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Projet 3 -->
+          <article class="group overflow-hidden rounded-2xl border border-white/10 bg-white/5 shadow-2xl">
+            <div class="relative aspect-[16/10]">
+              <img src="/portfolio/images/banniere.png" alt="Aperçu Nolark" class="h-full w-full object-cover opacity-90 transition group-hover:opacity-100" />
+              <div class="absolute inset-0 bg-gradient-to-t from-[#0a0713] via-transparent to-transparent opacity-60"></div>
+            </div>
+            <div class="p-6">
+              <h3 class="font-semibold">Nolark</h3>
+              <p class="mt-2 text-sm text-gray-400">Site vitrine/formation — intégration responsive.</p>
+              <a href="https://github.com/gagite/nolark/tree/master" target="_blank" rel="noopener noreferrer" class="mt-4 inline-flex items-center gap-2 text-violet-300 hover:text-violet-200">
+                Voir le projet
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M7 7h10v10"/></svg>
+              </a>
+            </div>
+          </article>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
-  <!-- Contact -->
-  <section id="contact" class="bg-gray-100 py-20">
-    <div class="container mx-auto px-6 text-center">
-      <h3 class="text-3xl font-bold mb-6">Contact</h3>
-      <p class="mb-6">Tu veux collaborer ou discuter ? N’hésite pas à me contacter.</p>
-      <a href="mailto:ton.haguith2005@gmail.com" class="bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-500 transition">Écrivez-moi</a>
+  <footer class="border-t border-white/10 bg-[#080511]">
+    <div class="max-w-6xl mx-auto px-6 py-10 text-center text-sm text-gray-400">
+      © <span id="year"></span> Haguith Guez — Tous droits réservés.
     </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="bg-gray-900 text-gray-400 py-6 text-center">
-    <p>&copy; 2025 Haguith Guez. Tous droits réservés.</p>
   </footer>
 
+  <script>
+    // Mobile nav toggle
+    const btn = document.getElementById('nav-toggle');
+    const menu = document.getElementById('nav-menu');
+    if (btn && menu) {
+      btn.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+      });
+    }
+    // Year in footer
+    const y = document.getElementById('year');
+    if (y) y.textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
